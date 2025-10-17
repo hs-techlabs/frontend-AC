@@ -1,0 +1,20 @@
+#container{
+    height: 300px;
+    width: 80%;
+    background-color: beige;
+    margin: 10px auto;
+    border: 2px solid black;
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    flex-wrap: wrap-reverse;
+}
+#container div{
+    height: 50px;
+    width: 100pxpx;
+    text-align: center;
+
+}
+#blue{
+    flex:2 2 100px;
+}

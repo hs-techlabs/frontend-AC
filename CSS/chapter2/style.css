@@ -1,0 +1,72 @@
+h1{
+    font-size: large;
+    color:aqua
+} 
+h1{
+    color: green;
+}
+h1::first-letter{
+    color:#eb0b19;
+}
+#login{
+    color:white;
+    background-color: green;
+}
+#signup{
+    color:white;
+    background-color: red;
+} 
+.upvote{
+    color: black;
+    background-color: green;
+}
+.answer{
+    color: black;
+    background-color:red;
+}
+.post a{
+    color:purple;
+}
+
+input[type="text"]{
+    color:rgb(176, 14, 14)
+}
+input[type="password"]{
+    color:rgb(33, 33, 179)
+}
+input[type]{
+    background-color: ghostwhite;
+}
+#myid p{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+    margin-top: 20px;
+} 
+button:hover {
+    background-color: aqua;
+    color: beige;
+}
+button:active{
+    color: red;
+    background-color: blue;
+}
+p.active{
+    font-weight: bold;
+    color: green;
+}
+input[type="radio"]:checked+label{
+    color:red ;
+    font-weight: bold;
+}
+div:nth-of-type(2n){
+    background-color: rgb(238, 189, 98);
+}
+p::first-line{
+    color: blue;
+}
+p::selection{
+    background-color: rgb(243, 243, 137);
+}
