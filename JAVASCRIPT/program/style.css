@@ -1,0 +1,30 @@
+/* body{
+    text-align: center;
+}
+
+
+div{
+    height: 100px;
+    width : 300px;
+    border: 1px solid black;
+    margin: auto;
+} */
+
+
+
+
+
+
+div{
+    height: 300px;
+    width : 300px;
+    border: 1px solid black;
+    margin: auto;
+    background-color: rgb(111, 111, 253);
+}
+ul{
+    background-color: rgb(255, 212, 127);
+}
+li{
+    background-color: rgb(36, 161, 129);
+}
