@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background:#04231f;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    text-align:center;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+h1{
+    font-size:5rem;
+    letter-spacing:8px;
+    background:linear-gradient(90deg,#ff0040,#76c04e,#004a8f);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.subtitle{
+    font-size:1.3rem;
+    color:#fdad00;
+    margin-bottom:30px;
+}
+
+.card{
+    width:180px;
+    padding:15px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+    /* box-shadow:0 0 20px rgba(0,255,255,0.2); */
+}
+
+.card p{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.game-board{
+    width:500px;
+    height:500px;
+    margin:auto;
+    border-radius:50%;
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    /* grid-template-rows:1fr 1fr; */
+    gap:10px;
+    background:#111;
+    /* padding:15px; */
+    /* box-shadow:0 0 40px rgba(0,255,255,.3); */
+}
+
+.btn{
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.btn:hover{
+    transform:scale(1.03);
+}
+
+.green{
+    background:#00ff51;
+    border-top-left-radius:100%;
+    box-shadow:0 0 30px #00ff66;
+}
+
+.red{
+    background:#f90000;
+    border-top-right-radius:100%;
+    box-shadow:0 0 30px #ff2b2b;
+}
+
+.yellow{
+    background:#ffd000;
+    border-bottom-left-radius:100%;
+    box-shadow:0 0 30px #ffd000;
+}
+
+.purple{
+    background:#1f8fff;
+    border-bottom-right-radius:100%;
+    box-shadow:0 0 30px #1f8fff;
+}
+
+.center{
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:#090909;
+    border-radius:30%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border:6px solid #222;
+    box-shadow:0 0 25px rgba(255,255,255,.1);
+}
+
+.center h2{
+    margin-bottom:15px;
+}
+
+#start-btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#fb0000;
+    color:white;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+.flash{
+    background-color: white;
+}
+
+.userFlash{
+    background-color: rgb(4, 16, 250);
+}

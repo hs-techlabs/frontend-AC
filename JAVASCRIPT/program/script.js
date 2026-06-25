@@ -19,7 +19,7 @@
 
 
 
-
+/*Activity*/
 // let btn=document.querySelector("button");
 // btn.addEventListener("click",function(){
 //     let h3=document.querySelector("h3");
@@ -53,5 +53,65 @@
 // });
 
 
+
+
+
+/*Event Bubbling and Capturing*/
+// let div=document.querySelector("div");
+// let ul=document.querySelector("ul");
+// let lis=document.querySelectorAll("li");
+// div.addEventListener("click",function(event){
+//     event.stopPropagation();
+//     console.log("div is clicked");
+// });
+// ul.addEventListener("click",function(event){
+//     event.stopPropagation();
+//     console.log("ul is clicked");
+// });
+// for(li of lis){
+// li.addEventListener("click",function(event){
+//     event.stopPropagation();
+//     console.log("li is clicked");
+// });}
+
+
+
+
+
+
+ /*to-do bubbling*/
+let inp=document.querySelector("input");
+let btn=document.querySelector("button");
+let ul=document.querySelector("ul");
+
+btn.addEventListener("click",function(){
+    let item=document.createElement("li");
+    item.innerText=inp.value;
+
+    let delbtn=document.createElement("button");
+    delbtn.innerText="delete";
+    delbtn.classList.add("delete");//to make delete button as a class
+
+    item.appendChild(delbtn);
+    ul.appendChild(item);
+    inp.value="";
+    });
+
+    ul.addEventListener("click",function(event){
+        if(event.target.nodeName=="BUTTON"){
+            console.log("element is deleted");
+            let listItem=event.target.parentElement; //li
+            listItem.remove();
+            // ul.removeChild(event.target.parentElement);
+        }});
+
+    // let delbtns=document.querySelectorAll(".delete");
+    // for(delbtn of delbtns){
+    // delbtn.addEventListener("click",function(){
+    //     let par=this.parentElement;
+    //     console.log("element is deleted");
+    //     par.remove();
+    // });  
+// }
 
 

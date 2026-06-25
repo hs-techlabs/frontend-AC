@@ -159,7 +159,7 @@
 //         console.log("task deleted");
 //     }
 //     req=prompt("please enter your reauest🙏🏻");
-        
+
 // }
 
 
@@ -473,7 +473,7 @@
 // console.log([...arr]);
 // console.log(Math.max(...arr));
 // console.log(Math.min(...arr));
-    
+
 
 
 
@@ -490,3 +490,172 @@
 // }]
 // let newstudent={...student, id:180};
 // console.log(newstudent);
+
+
+
+
+/*javascript call stack*/
+// function one(){
+//     return 1;
+// }
+
+// function two(){
+//     return one()+one();
+// }
+
+// function three(){
+//     return two()+one();
+// }
+
+// three();
+
+
+
+
+/* callback hell*/
+// h1 = document.querySelector("h1");
+// function changeColor(color, delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             h1.style.color = color;
+//             resolve("color changed to " + color);
+//         }, delay);
+//     });
+// }
+// changeColor("red", 1000)
+//     .then(() => {
+//         console.log("color changed to red");
+//         return changeColor("green", 1000);
+//     })
+//     .then(() => {
+//         console.log("color changed to green");
+//         return changeColor("blue", 1000);
+//     })
+//     .then(() => {
+//         console.log("color changed to blue");
+//         return changeColor("orange", 1000);
+//     })
+//     .then(() => {
+//         console.log("color changed to orange");
+//         return changeColor("pink", 1000);
+//     })
+//     .then(() => {
+//         console.log("color changed to pink");
+//         console.log("all colors are changed");
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     });
+// changeColor("red", 1000, () => {
+//     changeColor("green", 1000, () => {
+//         changeColor("blue", 1000, () => {
+//             changeColor("orange", 1000, () => {
+//                 changeColor("pink", 1000, () => {
+//                     console.log("all colors are changed");
+//                 });
+//             });
+//         });
+//     });
+// });
+
+
+
+
+
+//     function saveToDb(data, success, failure) {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if (internetSpeed < 5) {
+//             success();
+//         } else {
+//             failure();
+//         }
+//     }
+
+//     saveToDb("apna college",
+//         () => {
+//             console.log("s1 your data was saved");
+//             saveToDb("apna college2",
+//                 () => {
+//                     console.log("s2 your data was saved");
+//                     saveToDb("apna college3",
+//                         () => {
+//                             console.log("s3 your data was saved");
+//                         },
+//                         () => {
+//                             console.log("weak internet");
+//                         }
+//                     );
+//                 },
+//                 () => {
+//                     console.log("weak internet");
+//                 }
+//             );
+//         },
+//         () => {
+//             console.log("weak internet");
+//         }
+// );
+
+/*
+Promises
+The Promise object represents the eventual completion(success-> resolve) (or failure-> reject) of an asynchronous operation
+and its resulting value.*/
+
+// function savetoDb(data) {
+//     return new Promise((success, failure) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if (internetSpeed > 5) {
+//             success("your data was saved");
+//         } else {
+//             failure("weak internet");
+//         }
+//     });
+// }
+
+
+
+// function savetoDb(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if (internetSpeed > 5) {
+//             resolve("your data was saved");
+//         } else {
+//             reject("weak internet");
+//         }
+//     });
+// }
+
+// let request= savetoDb("apna college");// req=promise object
+// request.then(()=>{
+//     console.log("promise resolved");
+//     console.log(request);
+// })
+// .catch(()=>{
+//     console.log("promise rejected");
+//     console.log(request);
+// });
+
+// savetoDb("apna college")// req=promise object
+//     .then((result) => {
+//         console.log("1st promise resolved");
+//         console.log("result of promise: ", result);
+//         return savetoDb("apna college2")
+//     })
+//     .then((result) => {
+//         console.log("2nd promise resolved");
+//         console.log("result of promise: ", result);
+//         return savetoDb("apna college3");
+//     })
+//     .then((result) => {
+//         console.log("3rd promise resolved");
+//         console.log("result of promise: ", result);
+//     })
+//     .catch((error) => {
+//         console.log("promise rejected");
+//         console.log("error of promise: ", error);  
+//     });
+
+
+async function greet(){
+    return "hello";
+}
