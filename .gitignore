@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Operating-system files
+.DS_Store
+
+# Local environment configuration
+.env
+.env.*
+!.env.example
